@@ -1,6 +1,4 @@
-var path = require('path');
-
-
+// var path = require('path');
 var friends = require('../data/friend.js');
 
 
@@ -13,7 +11,7 @@ module.exports = function (app) {
 
     app.post('/api/friends', function (req, res) {
 
-        var userInput = req.body;
+        var userData = req.body;
         var userResponses = userInput.scores;
 
 
@@ -37,7 +35,7 @@ module.exports = function (app) {
             }
         }
 
-        friends.push(userInput);
+        friends.push(userData);
 
         res.json({ status: 'OK', matchName: matchName, matchImage: matchImage });
     });

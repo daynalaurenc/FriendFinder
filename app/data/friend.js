@@ -1,7 +1,7 @@
 var friendsArray = [
     {
         name:'MBJ',
-        photo: '',
+        photo: 'public/img/mbj.jpg',
         scores: [
             3,
             5,
@@ -17,7 +17,7 @@ var friendsArray = [
     },
     {
         name:'JG',
-        photo: '',
+        photo: 'public/img/jg.jpg',
         scores: [
             5,
             5,
@@ -33,7 +33,7 @@ var friendsArray = [
     },
     {
         name:'GV',
-        photo: '',
+        photo: 'public/img/gv.jpg',
         scores: [
             1,
             5,
@@ -49,7 +49,7 @@ var friendsArray = [
     },
     {
         name:'AP',
-        photo: '',
+        photo: 'public/img/ap.jpg',
         scores: [
             5,
             3,
@@ -65,7 +65,7 @@ var friendsArray = [
     },
     {
         name:'KW',
-        photo: '',
+        photo: 'public/img/kw.jpg',
         scores: [
             3,
             5,
@@ -81,7 +81,7 @@ var friendsArray = [
     },
     {
         name:'CT',
-        photo: '',
+        photo: 'public/img/ct.jpg',
         scores: [
             4,
             5,
@@ -97,7 +97,7 @@ var friendsArray = [
     },
     {
         name:'HK',
-        photo: '',
+        photo: 'public/img/hk.jpg',
         scores: [
             4,
             3,
@@ -113,7 +113,7 @@ var friendsArray = [
     },
     {
         name:'YS',
-        photo: '',
+        photo: 'public/img/ys.jpg',
         scores: [
             1,
             5,
@@ -129,7 +129,7 @@ var friendsArray = [
     },
     {
         name:'HG',
-        photo: '',
+        photo: 'public/img/hg.jpg',
         scores: [
             5,
             3,
@@ -145,7 +145,7 @@ var friendsArray = [
     },
     {
         name:'DLC',
-        photo: '',
+        photo: 'public/img/dlc.jpg',
         scores: [
             5,
             4,

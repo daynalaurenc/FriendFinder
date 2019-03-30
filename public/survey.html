@@ -6,9 +6,16 @@
     <title>FriendFinder</title>
 
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -16,7 +23,7 @@
     <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+
 
 </head>
 
@@ -179,7 +186,7 @@
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
                 aria-hidden="true"></i>
             Submit</button>
-            
+
 
         <hr>
         <footer class="footer">
@@ -204,8 +211,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img"
-                        src="#" alt="">
+                    <img id="match-img" src="#" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -244,7 +250,7 @@
             // Form validation
             function validateForm() {
                 var isValid = true;
-                $(".form-control").each(function () {
+                $(".form-group").each(function () {
                     if ($(this).val() === "") {
                         isValid = false;
                     }
@@ -262,7 +268,7 @@
             // If all required fields are filled
             if (validateForm()) {
                 // Create an object for the user"s data
-                var userData = {
+                var userInput = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
                     scores: [
@@ -277,12 +283,19 @@
                         $("#q9").val(),
                         $("#q10").val()
                     ]
-            
-                };
-                console.log(userData);
 
-               
-        });
+                };
+                console.log(userInput);
+                $.post('/api/friends', userInput)
+                    .done(function (data) {
+                        $('#match-name').text(data.matchName);
+                        $("#match-img").attr("src", data.matchImage);
+                        // Pop open the modal dialog
+                        $('#results-modal').modal('open');
+                    });
+
+                }
+            });
     </script>
 
 </body>
