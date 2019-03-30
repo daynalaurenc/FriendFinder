@@ -211,7 +211,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" src="#" alt="">
+                    <img id="match-img" src="" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -220,6 +220,12 @@
 
         </div>
     </div>
+
+    <style>
+        #match-img {
+            width: 75%;
+        }
+    </style>
 
     <script type="text/javascript">
         // Chosen CSS
@@ -246,27 +252,37 @@
         // Capture the form inputs
         $("#submit").on("click", function (event) {
             event.preventDefault();
+            console.log("submit1");
 
             // Form validation
             function validateForm() {
+                console.log("help");
                 var isValid = true;
-                $(".form-group").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
+                // $(".form-group").each(function () {
+                //     if ($(this).val() === "") {
+                //         isValid = false;
+                //     }
+                // });
+                if ($("#name").val() === "") {
+                    isValid = false;
+                }
 
+                if ($("#photo").val() === "") {
+                    isValid = false;
+                }
                 $(".chosen-select").each(function () {
 
                     if ($(this).val() === "") {
                         isValid = false;
                     }
                 });
+                console.log("isValid", isValid);
                 return isValid;
             }
 
             // If all required fields are filled
             if (validateForm()) {
+                // console.log("submit2");
                 // Create an object for the user"s data
                 var userInput = {
                     name: $("#name").val(),
@@ -291,11 +307,11 @@
                         $('#match-name').text(data.matchName);
                         $("#match-img").attr("src", data.matchImage);
                         // Pop open the modal dialog
-                        $('#results-modal').modal('open');
+                        $('#results-modal').modal('toggle');
                     });
 
-                }
-            });
+            }
+        });
     </script>
 
 </body>

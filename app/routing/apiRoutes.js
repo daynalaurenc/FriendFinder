@@ -10,10 +10,10 @@ module.exports = function (app) {
     });
 
     app.post('/api/friends', function (req, res) {
-
+        console.log(req.body)
         var userData = req.body;
-        var userResponses = userInput.scores;
-
+        var userResponses = userData.scores;
+        // console.log(req.body)
 
         var matchName = '';
         var matchImage = '';

@@ -1,7 +1,7 @@
 var friendsArray = [
     {
         name:'MBJ',
-        photo: 'public/img/mbj.jpg',
+        photo: 'mbj.jpg',
         scores: [
             3,
             5,
@@ -17,7 +17,7 @@ var friendsArray = [
     },
     {
         name:'JG',
-        photo: 'public/img/jg.jpg',
+        photo: 'jg.jpeg',
         scores: [
             5,
             5,
@@ -33,7 +33,7 @@ var friendsArray = [
     },
     {
         name:'GV',
-        photo: 'public/img/gv.jpg',
+        photo: 'gv.jpeg',
         scores: [
             1,
             5,
@@ -49,7 +49,7 @@ var friendsArray = [
     },
     {
         name:'AP',
-        photo: 'public/img/ap.jpg',
+        photo: 'ap.jpg',
         scores: [
             5,
             3,
@@ -65,7 +65,7 @@ var friendsArray = [
     },
     {
         name:'KW',
-        photo: 'public/img/kw.jpg',
+        photo: 'kw.jpg',
         scores: [
             3,
             5,
@@ -81,7 +81,7 @@ var friendsArray = [
     },
     {
         name:'CT',
-        photo: 'public/img/ct.jpg',
+        photo: 'ct.jpg',
         scores: [
             4,
             5,
@@ -97,7 +97,7 @@ var friendsArray = [
     },
     {
         name:'HK',
-        photo: 'public/img/hk.jpg',
+        photo: 'hk.jpg',
         scores: [
             4,
             3,
@@ -113,7 +113,7 @@ var friendsArray = [
     },
     {
         name:'YS',
-        photo: 'public/img/ys.jpg',
+        photo: 'ys.jpg',
         scores: [
             1,
             5,
@@ -129,7 +129,7 @@ var friendsArray = [
     },
     {
         name:'HG',
-        photo: 'public/img/hg.jpg',
+        photo: 'hg.jpg',
         scores: [
             5,
             3,
@@ -145,7 +145,7 @@ var friendsArray = [
     },
     {
         name:'DLC',
-        photo: 'public/img/dlc.jpg',
+        photo: 'dlc.jpeg',
         scores: [
             5,
             4,

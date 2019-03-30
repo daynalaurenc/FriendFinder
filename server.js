@@ -5,6 +5,7 @@ var app = express();
 var PORT = process.env.PORT || 7700;
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public/img"))
 app.use(express.json());
 
 require("./app/routing/apiRoutes")(app);
