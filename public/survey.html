@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Elite</title>
+    <title>FriendFinder</title>
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -49,24 +49,6 @@
             </select>
         </div>
 
-
-        <!-- <select class="chosen-select" id="q1" style="display: none;">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select> -->
-        <!-- <div class="chosen-container chosen-container-single" style="width: 157px;" title="" id="q1_chosen"><a
-                class="chosen-single chosen-default"><span>Select an Option</span>
-                <div><b></b></div>
-            </a>
-            <div class="chosen-drop">
-                <div class="chosen-search"><input type="text" autocomplete="off"></div>
-                <ul class="chosen-results"></ul>
-            </div>
-        </div> -->
 
         <h3><strong>Question 2</strong></h3>
         <h4>How you physically feel is just as important as your physical aesthetic.</h4>
@@ -217,12 +199,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">×</button>
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                     <h2 class="modal-title"><strong>Best Match</strong></h2>
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
                     <img id="match-img"
-                        src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                        src="#" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -298,20 +281,7 @@
                 };
                 console.log(userData);
 
-                // AJAX post the data to the friends API.
-                $.post("/api/friends", userData, function (data) {
-
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photo);
-
-                    // Show the modal with the best match
-                    $("#results-modal").modal("toggle");
-
-                });
-            } else {
-                alert("Please fill out all fields before submitting!");
-            }
+               
         });
     </script>
 
